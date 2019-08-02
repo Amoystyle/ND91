@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<skin version="1.0" load="1" type="menu">
+  <Menu>
+    <Menu UID="9191900" text="EDIT_MENU" >
+      <MenuItem UID="9191901" text="CUT" hotkey="X"/>
+      <MenuItem UID="9191902" text="COPY" hotkey="I" />
+      <MenuItem UID="9191903" text="PASTE" hotkey="P" />
+      <MenuItem UID="9191904" text="SELECT_ALL" hotkey="A" />
+    </Menu> 
+  </Menu>
+</skin>

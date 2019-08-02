@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta id="viewport" name="viewport" content="width=100%; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<title>friDay助手--zs.91.com</title>
+<link href="./css/faq.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <h1><img src="./images/image001.png" alt=""/>【friDay助手】WiFi連結幫助</h1>
+  </div>
+  <div class="content">
+    <h2>1.如何透過WiFi網路與PC端的friDay助手連結？</h2>
+    
+	<ul>
+		<li>點擊手機上的【立即掃描】按钮，會出现QR CODE掃描器；</li>
+    <p align="center"><img src="images/image001.jpg" border="0" alt="" /></p>
+		<li>打開電腦上的friDay助手，在未連結界面找到wifi连連結的QR CODE，如下圖。將手機的QR CODE 掃描器對準電腦上助手的QR CODE，即可自動連結。</li>
+    <p align="center"><img src="images/image002.jpg" border="0" alt="" /></p>
+
+	</ul>
+    <h2>2.按提示操作後仍連不上WiFi，是什麼原因？</h2>
+    
+	<ul>
+		<li>請檢查您的電腦是否和目前連結的手機處於同一個區網，如果不是，也無法透過WiFi連結；</li>
+		<li>請檢查目前WiFi訊號是否穩定：在WiFi訊號不穩定的情况下，可能導致連結超時而最终導致無法連結的情況。</li>
+	</ul>
+ 
+  </div>
+  <div class="footer">Copyright (c) 2014 friDay All Rights Reserved</div>
+</div>
+</body>
+</html>

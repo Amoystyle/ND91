@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<skin version="1.0">
+  <Window id = "menu" resize="0">
+    <Control style="Picture" id="background" pos="8|0,0,0,0" bk.image="#menubkg"/>
+  </Window>
+	<Window id="tooltipdlg" minWidth="60" minHeight="60" resize="0" title="">
+    <Control style="Picture" id="background" pos="8|0,0,0,0" bk.image="#tooltipbkgBR"/>
+    <Control style="Picture" id="infoicon" pos="0|8,12,28,28" bk.state="all" bk.imgseq="0,1,2,3,4" bk.image="|C5|framework#common\tooltip_icon.png"/>
+    <Label id="content" pos="8|8,8,8,8" txt.singleline="0" valign="center" halign="center"/>
+	</Window>
+  <Window id = "listbox" resize="0">
+    <List id ="list"   pos="8|0,0,0,0" bk.visible="1" bk.image="#layoutbk"/>
+  </Window>
+  <Window id = "default" minWidth="1024" minHeight="768" >
+    <Control style="window_background" id="background" pos="8|0,0,0,0"/>
+    <Control style="Picture" id="mask" pos="8|" bk.image="|S5,45,5,45|framework#common\win_mask_normal.png"/>
+    <XML id="window" />
+  </Window>
+  <Window id = "empty" resize="0">
+    <Control style="Picture" id="background" pos="8|0,0,0,0" bk.image="|U|S9,9,9,9|framework#common\win_bk_alpha.png"/>
+  </Window>
+  <Window id = "MessageBox"  minWidth="100" minHeight="50" resize="0">
+    <Control style="window_background" id="background" pos="8|0,0,0,0"/>
+    <Control style="Picture" pos="8|"  bk.image="|S5,45,5,45|framework#common\win_mask_normal.png"/>
+    <Control style="Picture" id="infoicon" pos="0|25,45,65,85" bk.state="all" bk.imgseq="0,1,2,3,4" bk.image="|C5|framework#common\tooltip_icon.png"/>
+    <Label   id="info"                 pos="8|80,43,20,50" txt.singleline="0" txt.endellipsis="1"/>
+    <Button  id="msgboxbtn1"          pos="2|70,28,10,6"    visible="0"/>
+    <Button  id="msgboxbtn2"          pos="2|140,28,80,6"   visible="0"/>
+    <Button  id="msgboxbtn3"        pos="2|210,28,150,6"  visible="0"/>
+    <XML id="window" sysbutton.minimize.visible="0"/>
+  </Window>
+</skin>

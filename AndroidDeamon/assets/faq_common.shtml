@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta id="viewport" name="viewport" content="width=100%; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<title>91助手--zs.91.com</title>
+<link href="./css/faq.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <h1><img src="./images/image001.png" alt=""/>【91助手】WiFi连接帮助</h1>
+  </div>
+  <div class="content">
+    <h2>1.如何通过WiFi网络与PC端的91助手连接？</h2>
+    
+	<ul>
+		<li>点击手机上的【立即扫描】按钮，会出现二维码扫描器；</li>
+    <p align="center"><img src="images/image001.jpg" border="0" alt="" /></p>
+		<li>打开电脑上的91助手，在未连接界面找到wifi连接的二维码，如下图。将手机的二维码扫描器对准电脑上助手的二维码，即可自动连接。</li>
+    <p align="center"><img src="images/image002.jpg" border="0" alt="" /></p>
+
+	</ul>
+    <h2>2.按提示操作后仍连不上WiFi，是什么原因？</h2>
+    
+	<ul>
+		<li>请检查您的电脑是否和当前连接的手机处于同一局域网，如果不是，也无法通过WiFi连接；</li>
+		<li>请检查当前WiFi信号是否稳定：在WiFi信号不稳定的情况下，可能导致连接超时而最终导致无法连接的情况。</li>
+	</ul>
+ 
+  </div>
+  <div class="footer">Copyright (c) 2008-2013 博远无线 All Rights Reserved</div>
+</div>
+</body>
+</html>

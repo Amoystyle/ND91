@@ -1,0 +1,32 @@
+﻿/* CSS Document 
+Use for:	91百宝箱
+Version:	1.0
+Date:		2010/03/02
+Author:		Sunny
+Update: 	2010/03/02
+ */
+ 
+/*Css Reset*/ 
+body,h1,h2,img{ margin:0; padding:0;}
+h1,h2{ font-size:100%;}
+img{ border:0; width:90%;}
+/*Common*/ 
+body{ color:#626262;  font-size:12px; line-height:1.5em;}
+/*Css Reset*/ 
+.header img{ width:36px; vertical-align:middle; position:relative; top:-2px;}
+.header h1{ text-align:center; font-size:15px; margin:5px auto;}
+/*Content*/ 
+.content h2{ color:#5297bc; line-height:29px; text-indent:15px; background:url(../images/blue_01.jpg) #f9fafc bottom repeat-x; border-bottom:1px #b9d1e5 solid;}
+.content p{ text-indent:2em; }
+.content p img{ margin-left:-2em;}
+/*Footer*/ 
+.footer{ height:33px; line-height:33px; text-align:center; background:url(../images/blue_02.jpg) repeat-x; color:#fff;}
+
+ul{
+	margin-right:20px;
+}
+
+ul li
+{
+ 	list-style-type:disc;
+}

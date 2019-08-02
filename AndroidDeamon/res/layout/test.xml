@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <ScrollView
+                android:id="@+id/log"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="vertical" >
+
+                    
+                      <Spinner 
+                          android:id="@+id/logmodeSpinner"   
+                          android:layout_width="fill_parent"  
+                          android:layout_height="wrap_content">                         
+                      </Spinner> 
+                    <CheckBox
+                        android:id="@+id/logmode"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="当前为log.txt模式"
+                    />
+                    
+                    <Button
+                        android:id="@+id/createlog"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="创建log文件以便输出日志" />
+                     <Button
+                        android:id="@+id/startlog"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="启动输出日志" />
+
+                    <Button
+                        android:id="@+id/openlog"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="打开log文件" />
+
+                    <Button
+                        android:id="@+id/deletelog"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="删除log文件" />
+
+                    <CheckBox
+                        android:id="@+id/check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="显示log"
+                    />
+                    <Button
+                        android:id="@+id/clearlog"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="清除log" />
+                    <LinearLayout
+                         android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        >
+                        <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="间隔读取时间："
+                        />
+                        <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/showlogtime"
+                        android:numeric="integer"
+                        android:text="2000"
+                    />
+                     </LinearLayout>
+
+   
+
+                    <ScrollView
+                        android:id="@+id/sv_show"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentTop="true"
+                        android:fadeScrollbars="false"
+                        android:scrollbarAlwaysDrawVerticalTrack="true"
+                        android:scrollbars="vertical"
+                       >
+
+                        <LinearLayout
+                            android:id="@+id/ll_layout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/showlog"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="vertical" />
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+            </ScrollView>
+
+            <ScrollView
+                android:id="@+id/info"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="vertical" >
+
+              <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="vertical" >
+
+                    <Button
+                        android:id="@+id/serverBtn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="获取运行中基本信息" />
+
+                    <TextView
+                        android:id="@+id/serverInfo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/startserver"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="打开服务" />
+
+                    <Button
+                        android:id="@+id/stopserver"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="关闭所有wifi连接服务" />
+
+                    <Button
+                        android:id="@+id/netbtn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="检查网络环境" />
+
+                    <TextView
+                        android:id="@+id/netxt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                   
+                     <Button
+                        android:id="@+id/checknetbtn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="检查是否真正连上互联网" />
+                   
+                   <Button
+                        android:id="@+id/devicebtn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="获取设备基本信息" />
+
+                    <TextView
+                        android:id="@+id/devicetxt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+
+
+                </LinearLayout>
+            </ScrollView>
+
+            <ScrollView
+                android:id="@+id/tool"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="vertical" >
+                    
+                      <Button
+                        android:id="@+id/scanmediabtn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="发送扫描媒体库广播" />
+                    
+                      <EditText
+                        android:id="@+id/ipedt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="192.168.252.61" />
+                      <EditText
+                        android:id="@+id/portedt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="6000" />
+
+                    <Button
+                        android:id="@+id/ipbtn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="建立tcp连接" />
+
+                    <Button
+                        android:id="@+id/getsubtn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="获取su权限" />
+
+                    <Button
+                        android:id="@+id/shellbtn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="执行shell指令" />
+
+                    <EditText
+                        android:id="@+id/shelledt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="shell指令" />
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <EditText
+                        android:id="@+id/businessedt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numeric="integer"
+                        android:layout_weight="1"
+                        android:hint="bussiness" />
+                         <EditText
+                        android:id="@+id/actionedt"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numeric="integer"
+                        android:hint="action" />
+                         <Button
+                        android:id="@+id/commandbtn"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="简单调用接口" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/shelltxt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </ScrollView>
+        </FrameLayout>
+    </LinearLayout>
+
+</TabHost>

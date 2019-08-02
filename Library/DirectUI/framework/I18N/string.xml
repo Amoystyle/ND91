@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<skin version="1.0" load="1" type="string">
+  <String>
+    <String id="EDIT_MENU">Edit菜单</String>
+    <String id="SELECT_ALL">全选</String>
+    <String id="CUT">剪切</String>
+    <String id="COPY">复制</String>
+    <String id="PASTE">粘贴</String>
+    <String id="LIMIT_INPUT">输入字符错误，请输入</String>
+    <String id="LIMIT_NUMBER">数字</String>
+    <String id="LIMIT_LETTER">字母</String>
+    <String id="LIMIT_CHAR">汉字</String>
+    <String id="LIMIT_BLANK">空格</String>
+    <String id="LIMIT_NOINPUT">请勿输入</String>
+  </String>
+</skin>
+
+

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nd.assistance"
+    android:versionCode="888"
+    android:versionName="8.8.888" >
+    
+    <uses-sdk android:minSdkVersion="3"/>
+    
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+    <uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_OWNER_DATA" />
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
+    <uses-permission android:name="android.permission.DEVICE_POWER"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>  
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE"/>
+	<uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >      
+        <activity
+            android:name=".ui.AssistanceActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                 <category android:name="android.intent.category.LAUNCHER" />           
+            </intent-filter>
+        </activity>
+         <activity
+            android:name=".ui.CameraActivity"
+            android:screenOrientation="portrait" 
+            android:clearTaskOnLaunch="true"
+            android:stateNotNeeded="true"
+            android:configChanges="orientation|keyboardHidden" >
+        </activity>  
+        
+        <activity
+            android:name=".ui.WifiConfirmActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name=".ui.HelpActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/my_theme" >
+        </activity>     
+        <activity
+            android:name=".ui.TestActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            >
+        </activity>     
+        
+
+        <receiver android:name=".controller.DaemonController" >
+            <intent-filter>
+                <action android:name="android.intent.action.START_SOCKET_SERVER" />
+                <action android:name="android.intent.action.RELEASE_SERVER_SERVICE" />
+                <action android:name="android.intent.action.LAUNCH_CONFIG" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name="daemon.receiver.SendSmsStatusReceiver" >
+            <intent-filter>
+                <action android:name="91PCSuite.SEND_SMS_RESULT" />
+            </intent-filter>
+        </receiver>
+        
+                <receiver android:name="daemon.receiver.SendSmsStatusReceiver" >
+            <intent-filter>
+                <action android:name="91PCSuite.SEND_SMS_RESULT" />
+            </intent-filter>
+        </receiver>
+        
+         <receiver android:name=".receiver.WifiStateChangeReceiver" >
+            <intent-filter>
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".server.ServerService"
+            android:process="com.nd.assistance.ServerService" >
+            <intent-filter>
+                <action android:name="com.nd.assistance.ui.IRemoteService" />
+            </intent-filter>
+        </service>
+        
+                                      <!-- BroadcastReceiver that listens for incoming SMS messages -->  
+        <receiver android:name="daemon.sms.SmsReceiver"  
+                android:permission="android.permission.BROADCAST_SMS">  
+            <intent-filter>  
+                <action android:name="android.provider.Telephony.SMS_DELIVER" />  
+            </intent-filter>  
+        </receiver>  
+  
+        <!-- BroadcastReceiver that listens for incoming MMS messages -->  
+        <receiver android:name="daemon.sms.MmsReceiver"  
+            android:permission="android.permission.BROADCAST_WAP_PUSH">  
+            <intent-filter>  
+                <action android:name="android.provider.Telephony.WAP_PUSH_DELIVER" />  
+                <data android:mimeType="application/vnd.wap.mms-message" />  
+            </intent-filter>  
+        </receiver>  
+  
+        <!-- Activity that allows the user to send new SMS/MMS messages -->  
+        <activity android:name="daemon.sms.ComposeSmsActivity" >  
+            <intent-filter>  
+                <action android:name="android.intent.action.SEND" />                  
+                <action android:name="android.intent.action.SENDTO" />  
+                <category android:name="android.intent.category.DEFAULT" />  
+                <category android:name="android.intent.category.BROWSABLE" />  
+                <data android:scheme="sms" />  
+                <data android:scheme="smsto" />  
+                <data android:scheme="mms" />  
+                <data android:scheme="mmsto" />  
+            </intent-filter>  
+        </activity>  
+  
+        <!-- Service that delivers messages from the phone "quick response" -->  
+        <service android:name="daemon.sms.HeadlessSmsSendService"  
+                 android:permission="android.permission.SEND_RESPOND_VIA_MESSAGE"  
+                 android:exported="true" >  
+            <intent-filter>  
+                <action android:name="android.intent.action.RESPOND_VIA_MESSAGE" />  
+                <category android:name="android.intent.category.DEFAULT" />  
+                <data android:scheme="sms" />  
+                <data android:scheme="smsto" />  
+                <data android:scheme="mms" />  
+                <data android:scheme="mmsto" />  
+            </intent-filter>  
+        </service> 
+      
+    </application>
+
+   
+</manifest>

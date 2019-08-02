@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<skin version="1.0" load="1" language="AR">
+  <Image>
+    <!--框架图片，勿动-->
+    <Image id="menuleftmask"      path="|U|C3|S2,2,2,2|framework#common\menu_mask_right.png" />
+    <Image id="menurightmask"     path="|U|C3|S2,2,2,2|framework#common\menu_mask_left.png" />
+    <Image id="menuarrow"         path="|U|framework#common\menu_arrow_ar.png"/>
+    <Image id="defgroupnode"      path="|C4|framework#common\tree_group_arrow_ar.png"/>
+    <Image id="comboxarrow"       path="|U|C3|S2,2,2,2|framework#common\combox_arrow_ar.png" />
+    <Image id="arrowext"          path="framework#common\arrow_ext_ar.png"/>
+    <Image id="maximizebox"       path="|R8|framework#common\button_maximize_ar.png" />
+    <Image id="minimizebox"       path="|R4|framework#common\button_minimize_ar.png" />
+    <Image id="closebox"          path="|R4|framework#common\button_close_ar.png" />
+  </Image>
+</skin>
+
+
